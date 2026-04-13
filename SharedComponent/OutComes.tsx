@@ -24,7 +24,7 @@ export default function OutcomesSection() {
       >
 
         {/* RIGHT CONTENT (comes first on mobile) */}
-        <div className="flex flex-col items-start gap-4 max-w-[42rem] w-full order-1 lg:order-2">
+        <div className="flex flex-col items-start gap-4 max-w-[30rem] w-full order-1 lg:order-2">
 
           {/* Label */}
           <span className="text-[#A79D9A] text-sm">
@@ -67,13 +67,11 @@ export default function OutcomesSection() {
           flex flex-col items-start
           p-[2.25rem]
           gap-[2rem]
-
           flex-1
-
           rounded-[1rem]
           bg-[rgba(28,27,27,0.75)]
           shadow-[0_10px_13.1px_0_#131313]
-
+           max-w-[600px] w-full
           order-2 lg:order-1
         "
         >

@@ -7,7 +7,7 @@ export default function CaseStudySection() {
         className="
         w-full max-w-[90rem]
         px-4 sm:px-8 lg:px-[6rem]
-        py-12 sm:py-16 lg:py-[6rem]
+        py-12 sm:py-16 lg:py-[1rem]
 
         flex flex-col items-center
         gap-[3rem]

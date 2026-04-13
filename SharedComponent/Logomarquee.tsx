@@ -13,11 +13,11 @@ export default function LogoMarquee() {
   ];
 
   return (
-    <section className="w-full py-3 sm:py-3 overflow-hidden">
+    <section className="w-full py-1 sm:py-3 overflow-hidden mt-4 sm:mt-6 lg:mt-[-3rem]">
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Heading */}
-        <p className="text-[0.65rem] sm:text-xs text-[#B3B3B3] mb-8 sm:mb-10 tracking-wide">
+        <p className="text-[1rem] sm:text-xs text-[#B3B3B3] mb-8 sm:mb-10 tracking-wide">
           Trusted By Brands Spending Lakhs On Ads Every Month
         </p>
 

@@ -27,19 +27,19 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full flex justify-center bg-[#131313] sticky top-0 z-50">
+    <header className="w-full flex justify-center bg-[#131313] fixed top-0 z-50">
 
       {/* Container */}
       <div
         className="
         flex w-full max-w-[90rem] 
         px-4 sm:px-8 lg:px-[6rem] 
-        py-4 sm:py-6 lg:py-[2rem] 
+        py-2 sm:py-3 lg:py-[2rem] 
         justify-between items-center
       "
       >
         {/* Logo */}
-        <div className="w-[5.75rem] h-[3rem] shrink-0">
+        <div className="w-[5.75rem] h-[rem] shrink-0">
           <Image
             src="/logo.png"
             alt="Logo"
