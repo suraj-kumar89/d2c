@@ -16,7 +16,7 @@ export default function FitSection() {
   ];
 
   return (
-    <section className="w-full flex justify-center bg-[#0E0E0E]">
+    <section className="w-full flex justify-center ">
       <div
         className="
         w-full max-w-[90rem]

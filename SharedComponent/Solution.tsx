@@ -2,7 +2,7 @@
 
 export default function ComparisonSection() {
   return (
-    <section className="w-full flex justify-center bg-black">
+    <section className="w-full flex justify-center ">
       <div
         className="
         w-full max-w-[90rem]

@@ -2,7 +2,7 @@
 
 export default function ProcessSection() {
   return (
-    <section className="w-full flex justify-center bg-black overflow-hidden">
+    <section className="w-full flex justify-center overflow-hidden">
       <div
         className="
         w-full max-w-[90rem]

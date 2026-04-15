@@ -4,7 +4,7 @@ import { BarChart3, AlertTriangle, RefreshCcw, Sparkles } from "lucide-react";
 
 export default function ProblemSection() {
   return (
-    <section className="w-full flex justify-center bg-black">
+    <section className="w-full flex justify-center">
       <div
         className="
         w-full max-w-[90rem]

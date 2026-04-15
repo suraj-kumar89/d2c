@@ -2,8 +2,8 @@
 
 export default function TimelineSection() {
   return (
-    <section className="w-full flex justify-center bg-black">
-      <div className="w-full max-w-[90rem] px-4 sm:px-6 lg:px-8 py-[5rem] lg:py-[6rem] flex flex-col gap-[4rem]">
+    <section className="w-full flex justify-center ">
+      <div className="w-full max-w-[90rem] px-4 sm:px-6 lg:px-8 py-[5rem] lg:py-[3rem] flex flex-col gap-[4rem]">
 
         {/* Top Heading */}
         <div className="flex flex-col items-center text-center gap-3">

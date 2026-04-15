@@ -2,7 +2,7 @@
 
 export default function LimitedSection() {
   return (
-    <section className="w-full flex justify-center bg-[linear-gradient(180deg,#0E0E0E_0%,rgba(14,14,14,0)_100%)]">
+    <section className="w-full flex justify-center ">
       <div
         className="
         w-full max-w-[90rem]

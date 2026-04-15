@@ -11,7 +11,7 @@ export default function Hero() {
         className="
         w-full max-w-[90rem] 
         px-4 sm:px-6 lg:px-8
-        py-[2rem] sm:py-[3rem] lg:py-[9rem]
+        py-[2rem] sm:py-[3rem] lg:py-[4rem]
         flex flex-col items-center 
         gap-[2.5rem] sm:gap-[3rem]
       "
