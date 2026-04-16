@@ -39,15 +39,15 @@ export default function Header() {
       "
       >
         {/* Logo */}
-        <div className="w-[92px] h-[58px] shrink-0">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={92}
-            height={58}
-            className="w-full h-full object-contain"
-          />
-        </div>
+     <div className="w-[110px] h-[70px] shrink-0">
+  <Image
+    src="/logo.png"
+    alt="Logo"
+    width={140}
+    height={80}
+    className="w-full h-full object-contain"
+  />
+</div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10">
