@@ -112,7 +112,7 @@ body {
    BUTTON (UNCHANGED)
 ========================= */
 
-.button {
+/* .button {
   cursor: pointer;
   position: relative;
   padding: 10px 24px;
@@ -123,7 +123,7 @@ body {
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
-}
+} */
 
 .button::before {
   content: "";

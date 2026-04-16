@@ -87,7 +87,8 @@ export default function FounderSection() {
     flex flex-col justify-end items-start
     p-6 sm:p-[2.25rem]
     gap-[1.375rem]
-
+    h-[400px] sm:h-[450px] lg:h-[550px]
+    w-[350px] sm:w-[400px] lg:w-[500px ]
     flex-1
     aspect-square
 
@@ -99,7 +100,7 @@ export default function FounderSection() {
 
     {/* Image */}
     <Image
-      src="/founder.jpg"
+      src="/founder.png"
       alt="Founder"
       fill
       className="object-cover"

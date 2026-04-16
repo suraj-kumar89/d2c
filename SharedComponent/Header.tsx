@@ -83,21 +83,24 @@ export default function Header() {
         <div className="flex items-center gap-4">
 
           {/* CTA Button */}
-          <button
-            onClick={() => handleScroll("contact")}
-            className="
-              hidden md:flex 
-              items-center justify-center 
-              px-6 py-3
-              rounded-full
-              bg-white text-black font-semibold text-sm
-              transition-all duration-300
-              hover:bg-[#3385E6] hover:text-white
-              hover:scale-105
-            "
-          >
-            Book A Quick Call
-          </button>
+   <button
+  onClick={() => handleScroll("contact")}
+  className="
+    hidden md:flex
+    items-center justify-center
+    px-5 py-3
+    gap-2
+    rounded-md
+    border border-[#333]
+    bg-[#242424]
+    text-white text-sm font-semibold
+    transition-all duration-300
+    hover:bg-[#3385E6] hover:border-[#3385E6]
+    hover:scale-105
+  "
+>
+  Book A Quick Call
+</button>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -155,20 +158,23 @@ export default function Header() {
           ))}
 
           {/* Mobile CTA */}
-          <button
-            onClick={() => handleScroll("contact")}
-            className="
-              mt-4
-              flex items-center justify-center 
-              px-6 py-3
-              rounded-full
-              bg-white text-black font-semibold text-sm
-              transition-all duration-300
-              hover:bg-[#3385E6] hover:text-white
-            "
-          >
-            Book A Quick Call
-          </button>
+         <button
+  onClick={() => handleScroll("contact")}
+  className="
+    mt-4
+    flex items-center justify-center
+    px-5 py-3
+    gap-2
+    rounded-lg
+    border border-[#333]
+    bg-[#242424]
+    text-white text-sm font-semibold
+    transition-all duration-300
+    hover:bg-[#3385E6] hover:border-[#3385E6]
+  "
+>
+  Book A Quick Call
+</button>
         </div>
       </div>
     </header>

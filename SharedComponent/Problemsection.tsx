@@ -152,34 +152,39 @@ export default function ProblemSection() {
         </div>
 
         {/* Bottom Statement */}
-        <div
-          className="
-          flex justify-center items-center
-          px-[2rem] py-[0.875rem]
+       <div
+  className="
+    flex flex-col
+    justify-center items-center
+    gap-8
+    self-stretch
 
-          sm:px-[3rem]
-          lg:px-[4rem]
+    px-1 py-[0.875rem]
+    sm:px-12
+    lg:px-1
 
-          rounded-md
-          bg-[linear-gradient(90deg,rgba(255,113,108,0)_0%,rgba(255,113,108,0.1)_25%,rgba(255,113,108,0.1)_50%,rgba(255,113,108,0.1)_75%,rgba(255,113,108,0)_100%)]
-        "
-        >
-          <p
-            className="
-            text-[#FF7F7A]
-            text-center
-            font-[500]
-            tracking-[-0.015rem]
-            text-[1.1rem] leading-[1.6rem]
-            sm:text-[1.3rem] sm:leading-[1.8rem]
-            lg:text-[1.5rem] lg:leading-[2rem]
-          "
-          >
-            This is not a visibility problem. <br />
-            It is a clarity problem.
-          </p>
-        </div>
+    rounded-md
 
+    bg-[linear-gradient(90deg,rgba(255,113,108,0)_0%,rgba(255,113,108,0.1)_25%,rgba(255,113,108,0.1)_5%,rgba(255,113,108,0.1)_5%,rgba(255,113,108,0)_100%)]
+  "
+>
+  <p
+    className="
+      text-[#FF7F7A]/60
+      text-center
+
+      font-semibold
+      tracking-[-0.015rem]
+
+      text-[1.1rem] leading-[1.6rem]
+      sm:text-[1.3rem] sm:leading-[1.8rem]
+      lg:text-[1.5rem] lg:leading-[2rem]
+    "
+  >
+    This is not a visibility problem. <br />
+    It is a clarity problem.
+  </p>
+</div>
       </div>
     </section>
   );
