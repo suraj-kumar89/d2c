@@ -41,7 +41,7 @@ export default function Header() {
         {/* Logo */}
      <div className="w-[110px] h-[70px] shrink-0">
   <Image
-    src="/logo.png"
+    src="/logo1.png"
     alt="Logo"
     width={140}
     height={80}

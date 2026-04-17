@@ -25,10 +25,10 @@ export default function LogoMarquee() {
         <div className="relative overflow-hidden">
 
           {/* Fade Left */}
-          <div className="absolute left-0 top-0 w-12 sm:w-20 lg:w-24 h-full bg-gradient-to-r from-[#131313] to-transparent z-10" />
+          {/* <div className="absolute left-0 top-0 w-12 sm:w-20 lg:w-24 h-full bg-gradient-to-r from-[#131313] to-transparent z-10" /> */}
 
           {/* Fade Right */}
-          <div className="absolute right-0 top-0 w-12 sm:w-20 lg:w-24 h-full bg-gradient-to-l from-[#131313] to-transparent z-10" />
+          {/* <div className="absolute right-0 top-0 w-12 sm:w-20 lg:w-24 h-full bg-gradient-to-l from-[#131313] to-transparent z-10" /> */}
 
           {/* Track */}
           <div className="flex items-center gap-10 sm:gap-16 lg:gap-20 animate-marquee whitespace-nowrap">

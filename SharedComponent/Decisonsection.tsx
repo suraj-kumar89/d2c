@@ -150,12 +150,11 @@ export default function DecisionSection() {
                     </div>
 
                     {/* CENTER NODE */}
-                    <div className="mt-12 sm:mt-20 lg:mt-[8rem] relative z-[2]">
-                        <div className="inline-flex items-center justify-center px-[1.6rem] py-[0.9rem] sm:px-[1.75rem] sm:py-[1rem] rounded-[62.4375rem] bg-[#1C6DCC] text-white font-[600] text-sm sm:text-base lg:text-[1.1rem]">
-                            Decisions
-                        </div>
-                    </div>
-
+           <div className="mt-12 sm:mt-20 lg:mt-[8rem] relative z-[2]">
+  <div className="shimmer-btn">
+    Decisions
+  </div>
+</div>
                 </div>
 
                 {/* BOTTOM POINTS */}

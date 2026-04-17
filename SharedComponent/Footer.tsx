@@ -34,7 +34,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="relative w-[4.75rem] h-[2.5rem]">
               <Image
-                src="/logo.png"
+                src="/logo1.png"
                 alt="Bluvo Logo"
                 fill
                 className="object-contain"
