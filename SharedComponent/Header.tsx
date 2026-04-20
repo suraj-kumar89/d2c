@@ -27,93 +27,90 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full flex justify-center top-0 ">
-
+    <header className="w-full flex justify-center top-0">
       {/* Container */}
       <div
         className="
         flex w-full max-w-[90rem] 
         px-4 sm:px-8 lg:px-[6rem] 
-        py-6 lg:py-6
-        justify-between items-center
+        py-6
+        items-center
       "
       >
         {/* Logo */}
-     <div className="w-[110px] h-[70px] shrink-0">
-  <Image
-    src="/logo1.png"
-    alt="Logo"
-    width={140}
-    height={80}
-    className="w-full h-full object-contain"
-  />
-</div>
+        <div className="w-[110px] h-[70px] shrink-0">
+          <Image
+            src="/logo1.png"
+            alt="Logo"
+            width={140}
+            height={80}
+            className="w-full h-full object-contain"
+          />
+        </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-10">
-          {navItems.map((item) => (
-            <button
-              key={item.name}
-              onClick={() => handleScroll(item.id)}
-              className="
-                relative inline-flex items-center
-                font-semibold text-[15px] leading-[120%]
-                text-white/60 hover:text-white
-                transition-all duration-300
-                py-2 group
-              "
-            >
-              {item.name}
-
-              {/* Underline */}
-              <span
+        {/* RIGHT SIDE (Nav + CTA) */}
+        <div className="hidden md:flex items-center gap-8 ml-auto">
+          
+          {/* Nav */}
+          <nav className="flex items-center gap-10">
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => handleScroll(item.id)}
                 className="
-                  pointer-events-none absolute -bottom-[6px] left-0 h-[1.5px]
-                  w-0 bg-white/80
-                  transition-all duration-300 origin-left
-                  group-hover:w-full
-                  group-hover:shadow-[0_0_10px_#3385E6]
+                  relative inline-flex items-center
+                  font-semibold text-[15px] leading-[120%]
+                  text-white/60 hover:text-white
+                  transition-all duration-300
+                  py-2 group
                 "
-              />
-            </button>
-          ))}
-        </nav>
+              >
+                {item.name}
 
-        {/* Right Side */}
-        <div className="flex items-center gap-4">
+                <span
+                  className="
+                    pointer-events-none absolute -bottom-[6px] left-0 h-[1.5px]
+                    w-0 bg-white/80
+                    transition-all duration-300 origin-left
+                    group-hover:w-full
+                    group-hover:shadow-[0_0_10px_#3385E6]
+                  "
+                />
+              </button>
+            ))}
+          </nav>
 
           {/* CTA Button */}
-   <button
-  onClick={() => handleScroll("contact")}
-  className="
-    hidden md:flex
-    items-center justify-center
-    px-5 py-3
-    gap-2
-    rounded-md
-    border border-[#333]
-    bg-[#242424]
-    text-white text-sm font-semibold
-    transition-all duration-300
-    hover:bg-[#3385E6] hover:border-[#3385E6]
-    hover:scale-105
-  "
->
-  Book A Quick Call
-</button>
-
-          {/* Mobile Menu Toggle */}
           <button
+            onClick={() => handleScroll("contact")}
             className="
-              md:hidden text-white text-2xl
-              transition-transform duration-200
-              hover:scale-110
+              flex items-center justify-center
+              px-5 py-3
+              gap-2
+              rounded-md
+              border border-[#333]
+              bg-[#242424]
+              text-white text-sm font-semibold
+              transition-all duration-300
+              hover:bg-[#3385E6] hover:border-[#3385E6]
+              hover:scale-105
             "
-            onClick={() => setOpen(true)}
           >
-            ☰
+            Book A Quick Call
           </button>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="
+            md:hidden ml-auto text-white text-2xl
+            transition-transform duration-200
+            hover:scale-110
+          "
+          onClick={() => setOpen(true)}
+        >
+          ☰
+        </button>
       </div>
 
       {/* Overlay */}
@@ -131,7 +128,6 @@ export default function Header() {
         ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col items-start gap-6 p-6 mt-16">
-
           {navItems.map((item) => (
             <button
               key={item.name}
@@ -145,7 +141,6 @@ export default function Header() {
             >
               {item.name}
 
-              {/* Underline (mobile too 🔥) */}
               <span
                 className="
                   absolute left-0 -bottom-1 h-[1px]
@@ -158,23 +153,23 @@ export default function Header() {
           ))}
 
           {/* Mobile CTA */}
-         <button
-  onClick={() => handleScroll("contact")}
-  className="
-    mt-4
-    flex items-center justify-center
-    px-5 py-3
-    gap-2
-    rounded-lg
-    border border-[#333]
-    bg-[#242424]
-    text-white text-sm font-semibold
-    transition-all duration-300
-    hover:bg-[#3385E6] hover:border-[#3385E6]
-  "
->
-  Book A Quick Call
-</button>
+          <button
+            onClick={() => handleScroll("contact")}
+            className="
+              mt-4
+              flex items-center justify-center
+              px-5 py-3
+              gap-2
+              rounded-lg
+              border border-[#333]
+              bg-[#242424]
+              text-white text-sm font-semibold
+              transition-all duration-300
+              hover:bg-[#3385E6] hover:border-[#3385E6]
+            "
+          >
+            Book A Quick Call
+          </button>
         </div>
       </div>
     </header>
