@@ -143,9 +143,7 @@ export default function TimelineSection() {
 
           </div>
 
-          {/* 🔥 Fade Overlay */}
-          <div className="pointer-events-none absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black via-black/80 to-transparent" />
-
+         
 
 
         </div>

@@ -4,16 +4,11 @@ import Image from "next/image";
 
 export default function ClientsSection() {
   const logos = [
-    "/ourclients/logo1.png",
-    "/ourclients/logo2.svg",
-    "/ourclients/logo3.png",
-    "/ourclients/logo4.svg",
-    "/ourclients/logo5.png",
-    "/ourclients/logo6.svg",
-    "/ourclients/logo7.svg",
-    "/ourclients/logo8.svg", 
-    "/ourclients/logo9.svg",
-    "/ourclients/logo10.svg",
+    "/ourclients/img1.svg",
+    "/ourclients/img2.svg",
+    "/ourclients/img3.svg",
+    "/ourclients/img4.svg",
+    "/ourclients/img5.svg",
   ];
 
   return (
@@ -23,7 +18,6 @@ export default function ClientsSection() {
         w-full max-w-[90rem]
         px-4 sm:px-8 lg:px-[6rem]
         py-12 sm:py-16 lg:py-[6rem]
-
         flex flex-col items-center
         gap-[3rem]
       "
@@ -63,22 +57,22 @@ export default function ClientsSection() {
             <div
               key={i}
               className="
-              flex flex-col justify-center items-center
+               flex flex-col justify-center items-center
 
-              p-4 sm:p-[2.25rem]
-              h-[5.5rem] sm:h-[7rem]
+    p-4 sm:p-[2.25rem]
+    h-[5.5rem] sm:h-[7rem]
 
-              w-[calc(50%-0.5rem)]
-              sm:w-[calc(33.33%-1rem)]
-              lg:w-[calc(25%-1.125rem)]
+    w-full
+    sm:w-[calc(50%-0.75rem)]
+    lg:w-[calc(25.33%-1rem)]
 
-              rounded-[1rem]
-              bg-[#1C1B1B]
+    rounded-[1rem]
+    bg-[#1C1B1B]
 
-              transition-all duration-300
-              hover:bg-[#222]
-              hover:shadow-[0_10px_25px_0_#0b0b0b]
-            "
+    transition-all duration-300
+    hover:bg-[#222]
+    hover:shadow-[0_10px_25px_0_#0b0b0b]
+  "
             >
               <div className="relative w-[100px] sm:w-[120px] h-[32px] sm:h-[40px]">
                 <Image

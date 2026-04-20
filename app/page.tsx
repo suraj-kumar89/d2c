@@ -17,6 +17,7 @@ import LimitedSection from "@/SharedComponent/Limited";
 import FAQSection from "@/SharedComponent/FAQs";
 import CTASection from "@/SharedComponent/FinalCTA";
 import Footer from "@/SharedComponent/Footer";
+import TestimonialSection from "@/SharedComponent/Testimonials";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
    <CaseStudySection/>
    <ClientsSection/>
    <OutcomesSection/>
+   <TestimonialSection/>
    <FitSection/>
    <LimitedSection/>
 
