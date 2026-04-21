@@ -2,7 +2,7 @@
 
 export default function ProcessSection() {
   return (
-    <section className="w-full flex justify-center min-h-[150vh]">
+    <section className="w-full flex justify-center min-h-[120vh] lg:min-h-[150vh]">
       <div
         className="
         w-full max-w-[90rem]
@@ -14,11 +14,11 @@ export default function ProcessSection() {
       "
       >
 
-        {/* RIGHT SIDE (STICKY CONTENT) */}
-        <div className="w-full lg:w-1/2 order-1 lg:order-2 h-[150vh]">
-          <div className="sticky top-[120px] flex flex-col items-start gap-3 sm:gap-4">
+        {/* RIGHT SIDE */}
+        <div className="w-full lg:w-1/2 order-1 lg:order-2 lg:h-[150vh]">
+          <div className="lg:sticky lg:top-[120px] flex flex-col items-start gap-3 sm:gap-4">
 
-            <span className="text-[#7A7A7A] text-[0.7rem] sm:text-[0.75rem] leading-[1rem] tracking-[0.0075rem] capitalize">
+            <span className="text-[#7A7A7A] text-[0.7rem] sm:text-[0.75rem]">
               Our Process
             </span>
 
@@ -33,10 +33,10 @@ export default function ProcessSection() {
           </div>
         </div>
 
-        {/* LEFT SIDE (STACKING CARDS) */}
-        <div className="relative w-full lg:w-1/2 order-2 lg:order-1 h-[150vh]">
+        {/* LEFT SIDE */}
+        <div className="relative w-full lg:w-1/2 order-2 lg:order-1 lg:h-[150vh]">
 
-          <div className="sticky top-[120px]">
+          <div className="lg:sticky lg:top-[120px] flex flex-col gap-6">
 
             {[
               "Your account never touches a junior. Experienced operators only. No freshers learning on your budget.",
@@ -46,17 +46,23 @@ export default function ProcessSection() {
               <div
                 key={index}
                 className={`
-                  sticky top-0
                   flex w-full max-w-[22.125rem]
                   px-6 sm:px-9 py-5 sm:py-6
                   rounded-[1rem]
                   bg-[#1C1B1B]
                   shadow-[0_10px_25px_rgba(0,0,0,0.5)]
-                  ${index === 1 ? "ml-auto" : ""}
+
+                  ${index === 1 ? "ml-auto lg:ml-auto" : ""}
+
+                  /* 🔥 MOBILE STACK (soft stacking) */
+                  sticky top-[80px]
+
+                  /* DESKTOP STACK (original) */
+                  lg:sticky lg:top-0
                 `}
                 style={{
                   zIndex: 10 + index,
-                  transform: `translateY(${index * 16}px)`,
+                  transform: `translateY(${index * 12}px)`, // smaller offset for mobile
                 }}
               >
                 <p className="text-[#C2C6D8] text-[1rem] sm:text-[1.25rem] leading-[1.5rem] sm:leading-[1.75rem] font-semibold">

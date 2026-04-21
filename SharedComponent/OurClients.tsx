@@ -12,7 +12,7 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section className="w-full flex justify-center ">
+    <section className="w-full flex justify-center">
       <div
         className="
         w-full max-w-[90rem]
@@ -49,30 +49,31 @@ export default function ClientsSection() {
           className="
           w-full max-w-[70rem]
           flex flex-wrap justify-center
-          gap-4 sm:gap-6
+          gap-4 sm:gap-6 lg:gap-6
         "
         >
-
           {logos.map((logo, i) => (
             <div
               key={i}
-              className="
-               flex flex-col justify-center items-center
+              className={`
+                flex justify-center items-center
 
-    p-4 sm:p-[2.25rem]
-    h-[5.5rem] sm:h-[7rem]
+                p-4 sm:p-[2.25rem]
+                h-[5.5rem] sm:h-[7rem]
 
-    w-full
-    sm:w-[calc(50%-0.75rem)]
-    lg:w-[calc(25.33%-1rem)]
+                w-[calc(50%-0.5rem)]   /* mobile → 2 per row */
+                sm:w-[calc(50%-0.75rem)] /* tablet → 2 per row */
+                lg:w-[calc(33.33%-1rem)] /* desktop → 3 per row */
 
-    rounded-[1rem]
-    bg-[#1C1B1B]
+                rounded-[1rem]
+                bg-[#1C1B1B]
 
-    transition-all duration-300
-    hover:bg-[#222]
-    hover:shadow-[0_10px_25px_0_#0b0b0b]
-  "
+                transition-all duration-300
+                hover:bg-[#222]
+                hover:shadow-[0_10px_25px_0_#0b0b0b]
+
+                ${i === logos.length - 1 ? "mx-auto lg:mx-0" : ""}
+              `}
             >
               <div className="relative w-[100px] sm:w-[120px] h-[32px] sm:h-[40px]">
                 <Image
@@ -80,17 +81,16 @@ export default function ClientsSection() {
                   alt="client logo"
                   fill
                   className="
-                  object-contain
-                  opacity-80
-                  grayscale
-                  hover:grayscale-0
-                  transition duration-300
-                "
+                    object-contain
+                    opacity-80
+                    grayscale
+                    hover:grayscale-0
+                    transition duration-300
+                  "
                 />
               </div>
             </div>
           ))}
-
         </div>
 
       </div>

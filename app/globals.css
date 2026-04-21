@@ -25,7 +25,7 @@ body {
   font-style: normal;
   background: #131313;
   color: white;
-  overflow-x: hidden;
+ overflow-x: clip;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -209,4 +209,23 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation: marquee 18s linear infinite;
+  }
 }
