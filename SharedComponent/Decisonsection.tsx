@@ -42,7 +42,7 @@ export default function DecisionSection() {
                                 border border-[#4d9eff]
                                 text-white text-xs sm:text-sm
                                 min-w-[90px]
-                                
+                                font-normal
                                 "
                             >
                                 {tag}
@@ -170,7 +170,7 @@ export default function DecisionSection() {
                                 <span className="text-red-500 text-xs">×</span>
                             </div>
 
-                            <p className="text-white text-sm sm:text-[0.95rem] leading-relaxed">
+                            <p className="text-white text-sm sm:text-[0.95rem] font-normal leading-relaxed">
                                 {text}
                             </p>
 

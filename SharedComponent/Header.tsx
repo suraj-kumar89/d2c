@@ -59,7 +59,7 @@ export default function Header() {
                 onClick={() => handleScroll(item.id)}
                 className="
                   relative inline-flex items-center
-                  font-semibold text-[15px] leading-[120%]
+                  font-normal text-[15px] leading-[120%]
                   text-white/60 hover:text-white
                   transition-all duration-300
                   py-2 group

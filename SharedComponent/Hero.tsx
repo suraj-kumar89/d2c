@@ -21,25 +21,30 @@ export default function Hero() {
         <div className="flex flex-col items-center gap-[1.5rem] sm:gap-[2rem] w-full">
 
           {/* Heading */}
-          <h1
-            className="
-            text-white text-center 
-            font-semibold 
-            tracking-[-0.08rem]
+        <h1
+  className="
+    text-center font-semibold
+    tracking-[-0.08rem]
 
-            text-[2rem] leading-[2.5rem]
-            sm:text-[3rem] sm:leading-[3.5rem]
-            lg:text-[4rem] lg:leading-[4.75rem]
+    text-[2rem] leading-[2.5rem]
+    sm:text-[3rem] sm:leading-[3.5rem]
+    lg:text-[4rem] lg:leading-[4.75rem]
 
-            max-w-[90%] sm:max-w-none
-          "
-          >
-            <span className="text-[#4D9EFF]">
-              Performance Marketing for D2C <br />Brands
-            </span>{" "}
-            That Need More Than <br/> Campaign Management
-          </h1>
+    max-w-[90%] sm:max-w-none
+  "
+>
+  {/* Blue Part */}
+  <span className="text-[#4D9EFF]">
+    Performance Marketing for D2C <br />
+    Brands
+  </span>{" "}
 
+  {/* White Part */}
+  <span className="text-white">
+    That Need More Than <br />
+    Campaign Management
+  </span>
+</h1>
           {/* Paragraph */}
           <p
             className="

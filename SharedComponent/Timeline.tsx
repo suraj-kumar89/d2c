@@ -61,6 +61,33 @@ export default function TimelineSection() {
               max-w-[28rem]">
               What the first 60 days look like
             </h3>
+      <button
+  className="
+    flex justify-center items-center
+    gap-2
+    px-[1.5rem] py-[0.875rem]
+    rounded-[0.75rem]
+    bg-[#3385E6]
+    text-white text-center
+    font-semibold text-[1rem] leading-[1.5rem]
+    shadow-[0_10px_53.4px_-19px_rgba(56,147,255,0.58)]
+    hover:bg-[#2f78cf] transition-all duration-200
+  "
+>
+  <span>Get Started</span>
+
+  {/* Arrow Icon */}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-4 h-4"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+  </svg>
+</button>
           </div>
 
 
