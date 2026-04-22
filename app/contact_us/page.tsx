@@ -3,8 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Footer from "@/SharedComponent/Footer";
-import HeaderContactus from "@/SharedComponent/ContactusHeader";
-import ContactusHeader from "@/SharedComponent/ContactusHeader";
+
 
 export default function BookDemo() {
   const router = useRouter();
@@ -33,7 +32,7 @@ export default function BookDemo() {
 
   return (
     <>
-    <ContactusHeader/> 
+   
       <div className="min-h-screen w-full flex justify-center items-center">
         <div
           className="calendly-inline-widget w-full h-screen"

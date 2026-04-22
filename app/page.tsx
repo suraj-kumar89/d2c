@@ -18,12 +18,12 @@ import FAQSection from "@/SharedComponent/FAQs";
 import CTASection from "@/SharedComponent/FinalCTA";
 import Footer from "@/SharedComponent/Footer";
 import TestimonialSection from "@/SharedComponent/Testimonials";
-import Header from "@/SharedComponent/Header";
+
 
 export default function Home() {
   return (
     <main>
-        <Header/>
+     
    <Hero/>
    <LogoMarquee/>
    <Showcase/>

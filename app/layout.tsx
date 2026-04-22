@@ -1,4 +1,5 @@
-import PopupCTA from "@/SharedComponent/PopUpCTA";
+
+import Header from "@/SharedComponent/Header";
 import "./globals.css";
 
 
@@ -10,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="text-white relative overflow-x-hidden">
-
+    
         {/* 🔥 BACKGROUND LIGHT */}
         <div className="bg-blobs-layer">
           <div className="bg-blob bg-blob--1"></div>
@@ -19,9 +20,9 @@ export default function RootLayout({
 
         {/* CONTENT */}
         <div className="relative z-20">
-        
+         <Header/>
           {children}
-          <PopupCTA />
+       
         </div>
 
       </body>
