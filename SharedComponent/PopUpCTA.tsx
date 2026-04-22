@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
+   import Link from "next/link";
 export default function PopupCTA() {
   const [visible, setVisible] = useState(false);
 
@@ -69,21 +69,25 @@ export default function PopupCTA() {
         </p>
 
         {/* BUTTON */}
-        <button
-          className="
-          mt-4 sm:mt-5 
-          w-full 
-          py-[0.7rem] sm:py-[0.75rem] 
-          rounded-[0.5rem] 
-          bg-[#4D9EFF] 
-          text-white 
-          text-sm font-medium 
-          hover:bg-[#3b82f6] 
-          transition
-        "
-        >
-          Get Free Audit
-        </button>
+    
+
+<Link
+  href="/contact_us"
+  className="
+    mt-4 sm:mt-5 
+    w-full 
+    py-[0.7rem] sm:py-[0.75rem] 
+    rounded-[0.5rem] 
+    bg-[#4D9EFF] 
+    text-white 
+    text-sm font-medium 
+    hover:bg-[#3b82f6] 
+    transition
+    flex justify-center items-center
+  "
+>
+  Get Free Audit
+</Link>
 
       </div>
 

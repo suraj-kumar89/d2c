@@ -1,6 +1,6 @@
 import PopupCTA from "@/SharedComponent/PopUpCTA";
 import "./globals.css";
-import Header from "@/SharedComponent/Header";
+
 
 export default function RootLayout({
   children,
@@ -19,7 +19,7 @@ export default function RootLayout({
 
         {/* CONTENT */}
         <div className="relative z-20">
-          <Header />
+        
           {children}
           <PopupCTA />
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Hero() {
   return (
     <section className="w-full flex justify-center">
@@ -21,8 +21,8 @@ export default function Hero() {
         <div className="flex flex-col items-center gap-[1.5rem] sm:gap-[2rem] w-full">
 
           {/* Heading */}
-        <h1
-  className="
+          <h1
+            className="
     text-center font-semibold
     tracking-[-0.08rem]
 
@@ -32,19 +32,19 @@ export default function Hero() {
 
     max-w-[90%] sm:max-w-none
   "
->
-  {/* Blue Part */}
-  <span className="text-[#4D9EFF]">
-    Performance Marketing for D2C <br />
-    Brands
-  </span>{" "}
+          >
+            {/* Blue Part */}
+            <span className="text-[#4D9EFF]">
+              Performance Marketing for D2C <br />
+              Brands
+            </span>{" "}
 
-  {/* White Part */}
-  <span className="text-white">
-    That Need More Than <br />
-    Campaign Management
-  </span>
-</h1>
+            {/* White Part */}
+            <span className="text-white">
+              That Need More Than <br />
+              Campaign Management
+            </span>
+          </h1>
           {/* Paragraph */}
           <p
             className="
@@ -72,30 +72,31 @@ export default function Hero() {
         "
         >
           {/* Primary Button */}
-          <button
+
+          <Link
+            href="/contact_us"
             className="
-            flex items-center justify-center 
-            gap-[0.5rem]
+    flex items-center justify-center 
+    gap-[0.5rem]
 
-            w-full sm:w-auto
-            h-[3.25rem]
+    w-full sm:w-auto
+    h-[3.25rem]
 
-            px-[1rem] 
-            rounded-[0.5rem]
+    px-[1rem] 
+    rounded-[0.5rem]
 
-            bg-[#3385E6] 
-            text-white
-            text-[1rem] font-semibold
-            leading-none
-            
-            shadow-[0_10px_53.4px_-19px_rgba(56,147,255,0.58)]
-            hover:bg-[#2f76cc]
-            transition
-          "
+    bg-[#3385E6] 
+    text-white
+    text-[1rem] font-semibold
+    leading-none
+    
+    shadow-[0_10px_53.4px_-19px_rgba(56,147,255,0.58)]
+    hover:bg-[#2f76cc]
+    transition
+  "
           >
             Book a Growth Diagnosis Call →
-          </button>
-
+          </Link>
         </div>
 
         {/* Small Note */}

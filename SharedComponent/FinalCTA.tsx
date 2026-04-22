@@ -1,6 +1,69 @@
 "use client";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function CTASection() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    spend: "",
+    goal: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  // ✅ Capture UTM once
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach((key) => {
+      const value = params.get(key);
+      if (value) localStorage.setItem(key, value);
+    });
+  }, []);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    if (!form.name || !form.email) {
+      alert("Please fill required fields");
+      return;
+    }
+
+    setLoading(true);
+
+    const utm = {
+      utm_source: localStorage.getItem("utm_source"),
+      utm_medium: localStorage.getItem("utm_medium"),
+      utm_campaign: localStorage.getItem("utm_campaign"),
+      utm_content: localStorage.getItem("utm_content"),
+      utm_term: localStorage.getItem("utm_term"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({ ...form, ...utm }),
+      });
+
+      if (res.ok) {
+        alert("Submitted successfully 🚀");
+        setForm({ name: "", email: "", spend: "", goal: "" });
+      } else {
+        alert("Something went wrong");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error submitting form");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section className="w-full flex justify-center ">
       <div
@@ -46,26 +109,26 @@ export default function CTASection() {
           </p>
 
           {/* CTA Button */}
-          <button
+          <Link
+            href="/contact_us"
             className="
-            flex items-center justify-center
-            w-fit
+    flex items-center justify-center
+    w-fit
 
-            px-[1.75rem] py-[0.875rem]
-            gap-[0.625rem]
+    px-[1.75rem] py-[0.875rem]
+    gap-[0.625rem]
 
-            rounded-[0.5rem]
-            bg-[#3385E6]
+    rounded-[0.5rem]
+    bg-[#3385E6]
 
-            text-white font-semibold
+    text-white font-semibold
 
-            hover:bg-[#2f76cc]
-            transition
-          "
+    hover:bg-[#2f76cc]
+    transition
+  "
           >
             Book a Growth Diagnosis Call →
-          </button>
-
+          </Link>
         </div>
 
         {/* RIGHT FORM */}
@@ -111,20 +174,12 @@ export default function CTASection() {
               NAME
             </label>
             <input
+              name="name"
+              value={form.name}
+              onChange={handleChange}
               type="text"
               placeholder="Full name"
-              className="
-              w-full
-              px-[0.875rem] py-[0.875rem]
-
-              rounded-[0.5rem]
-              border border-[rgba(255,255,255,0.1)]
-
-              bg-[rgba(36,36,36,0.75)]
-              text-white text-sm
-
-              outline-none
-            "
+              className="w-full px-[0.875rem] py-[0.875rem] rounded-[0.5rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(36,36,36,0.75)] text-white text-sm outline-none"
             />
           </div>
 
@@ -134,6 +189,9 @@ export default function CTASection() {
               COMPANY EMAIL
             </label>
             <input
+              name="email"
+              value={form.email}
+              onChange={handleChange}
               type="email"
               placeholder="name@company.com"
               className="w-full px-[0.875rem] py-[0.875rem] rounded-[0.5rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(36,36,36,0.75)] text-white text-sm outline-none"
@@ -145,10 +203,19 @@ export default function CTASection() {
             <label className="text-[#E0E0E0] text-[0.75rem] leading-[1rem] tracking-[0.075rem] uppercase">
               CURRENT MONTHLY SPEND
             </label>
-            <select className="w-full px-[0.875rem] py-[0.875rem] rounded-[0.5rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(36,36,36,0.75)] text-white text-sm outline-none">
-              <option>₹5L – ₹20L</option>
-              <option>₹20L – ₹50L</option>
-              <option>₹50L+</option>
+
+            <select
+              name="spend"
+              value={form.spend}
+              onChange={handleChange}
+              className="w-full px-[0.875rem] py-[0.875rem] rounded-[0.5rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(36,36,36,0.75)] text-white text-sm outline-none"
+            >
+              <option value="" disabled hidden>
+                Select your monthly spend
+              </option>
+              <option value="5-20">₹5L – ₹20L</option>
+              <option value="20-50">₹20L – ₹50L</option>
+              <option value="50+">₹50L+</option>
             </select>
           </div>
 
@@ -158,6 +225,9 @@ export default function CTASection() {
               GROWTH GOAL
             </label>
             <textarea
+              name="goal"
+              value={form.goal}
+              onChange={handleChange}
               rows={3}
               placeholder="What is your biggest bottleneck right now?"
               className="w-full px-[0.875rem] py-[0.875rem] rounded-[0.5rem] border border-[rgba(255,255,255,0.1)] bg-[rgba(36,36,36,0.75)] text-white text-sm outline-none resize-none"
@@ -166,6 +236,8 @@ export default function CTASection() {
 
           {/* SUBMIT BUTTON */}
           <button
+            onClick={handleSubmit}
+            disabled={loading}
             className="
             w-full
             flex justify-center items-center
@@ -182,7 +254,7 @@ export default function CTASection() {
             transition
           "
           >
-            Find My Growth Gaps
+            {loading ? "Submitting..." : "Find My Growth Gaps"}
           </button>
 
           {/* FOOTNOTE */}

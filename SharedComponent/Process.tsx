@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 export default function ProcessSection() {
   return (
     <section className="w-full flex justify-center min-h-[120vh] lg:min-h-[150vh]">
@@ -29,7 +29,10 @@ export default function ProcessSection() {
               How <br />
               Bluvo works
             </h2>
-            <button
+         import Link from "next/link";
+
+<Link
+  href="/contact_us"
   className="
     flex justify-center items-center
     gap-2
@@ -53,9 +56,13 @@ export default function ProcessSection() {
     stroke="currentColor"
     strokeWidth={2}
   >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M5 12h14M13 6l6 6-6 6"
+    />
   </svg>
-</button>
+</Link>
           </div>
         </div>
 

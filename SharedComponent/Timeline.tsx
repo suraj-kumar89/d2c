@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 
 
 
@@ -61,8 +61,12 @@ export default function TimelineSection() {
               max-w-[28rem]">
               What the first 60 days look like
             </h3>
-      <button
-  className="
+
+            import Link from "next/link";
+
+            <Link
+              href="/contact_us"
+              className="
     flex justify-center items-center
     gap-2
     px-[1.5rem] py-[0.875rem]
@@ -73,21 +77,25 @@ export default function TimelineSection() {
     shadow-[0_10px_53.4px_-19px_rgba(56,147,255,0.58)]
     hover:bg-[#2f78cf] transition-all duration-200
   "
->
-  <span>Get Started</span>
+            >
+              <span>Get Started</span>
 
-  {/* Arrow Icon */}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-4 h-4"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2}
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
-  </svg>
-</button>
+              {/* Arrow Icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 12h14M13 6l6 6-6 6"
+                />
+              </svg>
+            </Link>
           </div>
 
 
@@ -170,7 +178,7 @@ export default function TimelineSection() {
 
           </div>
 
-         
+
 
 
         </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
+import { useState } from "react";
+import Link from "next/link";
 type NavItem = {
   name: string;
   id: string;
@@ -38,15 +39,17 @@ export default function Header() {
       "
       >
         {/* Logo */}
-        <div className="w-[110px] h-[70px] shrink-0">
-          <Image
-            src="/logo1.png"
-            alt="Logo"
-            width={140}
-            height={80}
-            className="w-full h-full object-contain"
-          />
-        </div>
+        <Link href="/">
+  <div className="w-[110px] h-[70px] shrink-0 cursor-pointer">
+    <Image
+      src="/logo1.png"
+      alt="Logo"
+      width={140}
+      height={80}
+      className="w-full h-full object-contain"
+    />
+  </div>
+</Link>
 
         {/* RIGHT SIDE (Nav + CTA) */}
         <div className="hidden md:flex items-center gap-8 ml-auto">
@@ -81,11 +84,12 @@ export default function Header() {
           </nav>
 
           {/* CTA Button */}
-          <button
-            onClick={() => handleScroll("contact")}
-            className="
-              flex items-center justify-center
-              px-5 py-3
+
+          <Link href="/contact_us">
+            <button
+              className="
+                flex items-center justify-center
+                px-5 py-3
               gap-2
               rounded-md
               border border-[#333]
@@ -98,6 +102,7 @@ export default function Header() {
           >
             Book A Quick Call
           </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -153,23 +158,23 @@ export default function Header() {
           ))}
 
           {/* Mobile CTA */}
-          <button
-            onClick={() => handleScroll("contact")}
-            className="
-              mt-4
-              flex items-center justify-center
-              px-5 py-3
-              gap-2
-              rounded-lg
-              border border-[#333]
-              bg-[#242424]
-              text-white text-sm font-semibold
-              transition-all duration-300
-              hover:bg-[#3385E6] hover:border-[#3385E6]
-            "
-          >
-            Book A Quick Call
-          </button>
+         <Link
+  href="/contact_us"
+  className="
+    mt-4
+    flex items-center justify-center
+    px-5 py-3
+    gap-2
+    rounded-lg
+    border border-[#333]
+    bg-[#242424]
+    text-white text-sm font-semibold
+    transition-all duration-300
+    hover:bg-[#3385E6] hover:border-[#3385E6]
+  "
+>
+  Book A Quick Call
+</Link>
         </div>
       </div>
     </header>
