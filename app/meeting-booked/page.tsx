@@ -1,10 +1,10 @@
 
-import ContactusHeader from "@/SharedComponent/ContactusHeader";
+
 import Footer from "@/SharedComponent/Footer";
 export default function MeetingBookedPage() {
   return (
     <>
-      <ContactusHeader />
+ 
 
       <div className="min-h-screen flex flex-col justify-center items-center bg-black">
         <h1 className="text-white text-4xl lg:text-9xl font-semibold text-center pb-10">
