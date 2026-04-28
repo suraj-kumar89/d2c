@@ -58,7 +58,7 @@ function MobileFlowSection() {
 </svg>
 
   {/* Left-Center Line */}
-  <svg  className="absolute left-[26%] bottom-1 w-[5.4rem] h-auto" xmlns="http://www.w3.org/2000/svg" width="85" height="116" viewBox="0 0 85 116" fill="none">
+  <svg  className="absolute left-[27.8%] bottom-1 w-[5.4rem] h-auto" xmlns="http://www.w3.org/2000/svg" width="85" height="116" viewBox="0 0 85 116" fill="none">
   <path d="M0.400391 0V36.6754C0.400391 59.8376 19.177 78.6142 42.3392 78.6142H46.8922C67.5398 78.6142 84.278 95.3524 84.278 116" stroke="url(#paint0_linear_6880_22635)" strokeWidth="0.8"/>
   <defs>
     <linearGradient id="paint0_linear_6880_22635" x1="42.3392" y1="-6" x2="42.3392" y2="228.299" gradientUnits="userSpaceOnUse">
