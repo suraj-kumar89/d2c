@@ -18,6 +18,7 @@ import FAQSection from "@/SharedComponent/FAQs";
 import CTASection from "@/SharedComponent/FinalCTA";
 import Footer from "@/SharedComponent/Footer";
 import TestimonialSection from "@/SharedComponent/Testimonials";
+import FlowSection from "@/SharedComponent/Decisonsection";
 
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
    <Showcase/>
    <ProblemSection/>
    <ComparisonSection/>
-   <DecisionSection/>
+   <FlowSection/>
    <TimelineSection/>
    <ProcessSection/>
    <PrinciplesSection/>

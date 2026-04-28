@@ -1,8 +1,105 @@
 "use client";
-
-export default function PrinciplesSection() {
+const MobilePrinciples = () => {
   return (
-    <section className="w-full flex justify-center">
+    <div className="block lg:hidden w-full">
+
+      <section className="w-full px-4 py-[3.5rem] flex flex-col gap-8">
+
+        {/* TEXT SECTION */}
+        <div className="flex flex-col items-center text-center gap-4">
+
+          {/* Subtitle */}
+          <span className="
+            text-[#B3B3B3]
+            text-[0.9rem] leading-[1.4rem]
+          ">
+            Principles
+          </span>
+
+          {/* Heading */}
+          <h2 className="
+            text-white font-semibold
+            tracking-[-0.025rem]
+
+            text-[1.9rem] leading-[2.4rem]
+            max-w-[22rem]
+          ">
+            We do not operate like <br />
+            most agencies. By design.
+          </h2>
+
+          {/* Description */}
+          <p className="
+            text-[#B3B3B3]
+            text-[0.95rem] leading-[1.5rem]
+            max-w-[22rem]
+          ">
+            We would rather tell you an uncomfortable truth than protect the relationship.
+          </p>
+
+        </div>
+
+        {/* GRID */}
+        <div className="grid grid-cols-2 gap-[1rem] justify-center">
+  {[
+    "We do not optimise for dashboards.",
+    "We do not scale what is not ready.",
+    "We do not say yes to everything.",
+    "We do not hide behind reports.",
+  ].map((text, i) => (
+    <div
+      key={i}
+      className="
+        flex flex-col justify-between items-start
+
+        w-[10.625rem] h-[11.625rem]
+        p-[1rem]
+
+        rounded-[1rem]
+        bg-[#1C1B1B]
+      "
+    >
+
+      {/* Number */}
+      <span className="
+        w-full
+        text-[#4D9EFF]
+
+        text-[2.5rem] leading-[3.25rem]
+        tracking-[-0.025rem]
+        font-[600]
+      ">
+        {String(i + 1).padStart(2, "0")}
+      </span>
+
+      {/* Content */}
+      <p className="
+      mt-[-6rem]
+        w-full
+        text-[#E5E2E1]
+
+        text-[1rem] leading-[1.5rem]
+        font-[600]
+      ">
+        {text}
+      </p>
+
+    </div>
+  ))}
+
+</div>
+
+      </section>
+
+    </div>
+  );
+};
+
+
+const DesktopPrinciples = () => {
+  return (
+    <div className="hidden lg:block">
+      <section className="w-full flex justify-center">
       <div
         className="
         w-full max-w-[90rem]
@@ -114,5 +211,14 @@ export default function PrinciplesSection() {
 
       </div>
     </section>
+    </div>
+  );
+};
+export default function PrinciplesSection() {
+  return (
+    <>
+      <MobilePrinciples />
+      <DesktopPrinciples />
+    </>
   );
 }

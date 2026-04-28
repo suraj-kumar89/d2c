@@ -2,7 +2,68 @@
 
 import Image from "next/image";
 import Link from "next/link";
-export default function Hero() {
+import { useEffect, useState } from "react";
+
+/* 🔧 Hook to detect mobile */
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < 768);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  return isMobile;
+}
+
+/* 📱 Mobile Version */
+function MobileHero() {
+  return (
+    <section className="w-full px-4 py-8 flex flex-col items-center text-center">
+
+      <h1 className="text-[1.75rem] leading-[2.2rem] font-semibold">
+        <span className="text-[#4D9EFF]">
+          Performance Marketing 
+        </span>
+        <br />
+        <span className="text-[#4D9EFF]">
+          for D2C Brands 
+        </span>{" "}
+        <span className="text-white">
+           That 
+        </span>
+        <br />
+        <span className="text-white">
+            Need More Than
+        </span>
+        <br />
+        <span className="text-white">
+           Campaign Management
+        </span>
+      </h1>
+
+      <p className="text-[#B3B3B3] text-sm mt-4 max-w-[90%]">
+        Most agencies are not fixing your growth. They are managing your ad account.
+      </p>
+
+      <Link
+        href="/contact_us"
+        className="mt-6 w-full h-[3rem] flex items-center justify-center bg-[#3385E6] text-white rounded-md"
+      >
+        Book a Growth Diagnosis Call →
+      </Link>
+
+      <p className="text-[#34D399] text-xs mt-3">
+        30 Minutes. No Pitch. Just Clarity.
+      </p>
+    </section>
+  );
+}
+
+/* 🖥️ Desktop Version (UNCHANGED) */
+function DesktopHero() {
   return (
     <section className="w-full flex justify-center">
 
@@ -45,6 +106,7 @@ export default function Hero() {
               Campaign Management
             </span>
           </h1>
+
           {/* Paragraph */}
           <p
             className="
@@ -71,8 +133,6 @@ export default function Hero() {
           gap-4 w-full sm:w-auto
         "
         >
-          {/* Primary Button */}
-
           <Link
             href="/contact_us"
             className="
@@ -107,4 +167,11 @@ export default function Hero() {
       </div>
     </section>
   );
+}
+
+/* 🎯 Main Component */
+export default function Hero() {
+  const isMobile = useIsMobile();
+
+  return isMobile ? <MobileHero /> : <DesktopHero />;
 }

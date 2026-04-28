@@ -1,8 +1,118 @@
 "use client";
 import Link from "next/link";
-export default function ProcessSection() {
+
+
+const MobileProcess = () => {
   return (
-    <section className="w-full flex justify-center min-h-[120vh] lg:min-h-[150vh]">
+    <div className="block lg:hidden w-full">
+
+      <section className="w-full px-4 py-[4rem] flex flex-col gap-8">
+
+
+
+        <div className="w-full flex flex-col items-center text-center gap-4">
+
+  {/* Top Tag */}
+  <span className="
+    w-full
+    text-[#7A7A7A]
+    text-[0.75rem] leading-[1.125rem]
+    tracking-[0.0075rem]
+    font-normal
+    capitalize
+  ">
+    Our Process
+  </span>
+
+  {/* Heading */}
+  <h2 className="
+    w-full
+    text-white
+    font-[600]
+    tracking-[-0.025rem]
+    text-[2.5rem] leading-[3.25rem]
+  ">
+    How Bluvo works
+  </h2>
+
+  {/* Button */}
+  <Link
+    href="/contact_us"
+    className="
+      flex justify-center items-center
+      gap-[0.5rem]
+      px-[1.5rem] py-[0.875rem]
+      rounded-[0.75rem]
+      bg-[#3385E6]
+      text-white text-center
+      text-[1rem] leading-[1.5rem] font-[600]
+      shadow-[0_10px_53.4px_-19px_rgba(56,147,255,0.58)]
+      w-fit
+    "
+  >
+    <span>Get Started</span>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-4 h-4"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 12h14M13 6l6 6-6 6"
+      />
+    </svg>
+  </Link>
+
+</div>
+
+        {/* 🔥 STACKING CARDS */}
+        <div className="relative mt-8 px-4 flex flex-col gap-6">
+
+          {[
+            "Your account never touches a junior. Experienced operators only. No freshers learning on your budget.",
+            "We spend your money like it is ours. If it does not move the business forward, we do not do it.",
+            "Everything stays connected. Ads, creative, funnel, economics. One system. No silos. Strategy stays close to the founder."
+          ].map((text, index) => (
+            <div
+              key={index}
+              className="sticky top-[80px] mb-6"
+              style={{
+                zIndex: 10 + index,
+              }}
+            >
+              <div className={`
+                flex w-full max-w-[22.125rem]
+                px-6 py-5
+                rounded-[1rem]
+                bg-[#1C1B1B]
+                shadow-[0_10px_25px_rgba(0,0,0,0.5)]
+                ${index === 1 ? "ml-auto" : ""}
+              `}>
+                <p className="text-[#C2C6D8] text-[1rem] leading-[1.5rem] font-semibold">
+                  {text}
+                </p>
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+    </div>
+  );
+};
+
+
+const DesktopProcess = () => {
+  return (
+    <div className="hidden lg:block">
+       <section className="w-full flex justify-center min-h-[120vh] lg:min-h-[150vh]">
       <div
         className="
         w-full max-w-[90rem]
@@ -110,5 +220,14 @@ export default function ProcessSection() {
 
       </div>
     </section>
+    </div>
+  );
+};
+export default function ProcessSection() {
+  return (
+     <>
+      <MobileProcess />
+      <DesktopProcess />
+    </>
   );
 }

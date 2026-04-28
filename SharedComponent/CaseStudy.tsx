@@ -15,7 +15,7 @@ export default function CaseStudySection() {
       >
 
         {/* HEADING */}
-        <div className="text-center flex flex-col gap-3 max-w-[50rem]">
+        <div className="text-left flex flex-col gap-3 max-w-[50rem]">
 
           <span className="text-[#A79D9A] text-sm">
             Case Study
@@ -23,7 +23,7 @@ export default function CaseStudySection() {
 
           <h2
             className="
-            text-white font-semibold text-center
+            text-white font-semibold text-left
             tracking-[-0.07rem]
 
             text-[2rem] leading-[2.6rem]
